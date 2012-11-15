@@ -9,7 +9,7 @@ namespace TestMonoGameAndroid
     [Activity(
         Label = "MonoGame Test",
         MainLauncher = true, ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden,
-        Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Landscape, 
+        Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.SensorLandscape, 
         Theme = "@android:style/Theme.NoTitleBar", 
         LaunchMode = LaunchMode.SingleInstance)]
     public class Activity1 : AndroidGameActivity

@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Input;
 
 namespace TestMonoGameAndroid
 {
@@ -30,6 +31,13 @@ namespace TestMonoGameAndroid
 
         protected override void Update(GameTime gameTime)
         {
+            var gamepad = GamePad.GetState(PlayerIndex.One);
+            if (gamepad.IsButtonDown(Buttons.Back))
+            {
+                Exit();
+                return;
+            }
+
             var touches = TouchPanel.GetState();
             if (touches.Count > 0)
             {
